@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sashook Limited | Junk Removal and Dirt Works, Greater Denver</title>
+    <meta name="description" content="Sashook Limited: dump trailer rental, junk removal, garage cleanouts, land cleanup and demolition in Greater Denver. Call 720-707-9133 to book.">
+    <meta property="og:title" content="Sashook Limited | Junk Removal and Dirt Works">
+    <meta property="og:description" content="Dump trailer rental, junk removal, garage cleanouts, land cleanup and demolition in Greater Denver.">
+    <meta property="og:url" content="https://sashook.co/">
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#16130f">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&display=swap">
+    <style>
+        /* Sashook brand tokens, copied from sashook-web/public/styles.css. */
+        :root {
+            --ink: #16130f;
+            --ink-soft: #27221c;
+            --paper: #fbf8f3;
+            --sand: #f1eadf;
+            --line: rgba(22, 19, 15, 0.12);
+            --muted: #625a50;
+            --band-muted: #b9ae9f;
+            --yellow: #f5b700;
+            --yellow-deep: #dea600;
+            --font: 'Archivo', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+        }
+        *, *::before, *::after { box-sizing: border-box; }
+        html { -webkit-text-size-adjust: 100%; }
+        body {
+            margin: 0;
+            font-family: var(--font);
+            font-size: 1.0625rem;
+            line-height: 1.6;
+            color: var(--ink);
+            background: var(--paper);
+        }
+        a { color: inherit; }
+        :focus-visible { outline: 3px solid var(--yellow); outline-offset: 3px; border-radius: 4px; }
+        .wrap { width: min(1080px, 100% - 2.5rem); margin-inline: auto; }
+
+        .hero { background: var(--ink); color: var(--paper); }
+        .hero .wrap { padding-block: clamp(36px, 7vw, 80px) clamp(40px, 7vw, 84px); display: grid; gap: 28px; }
+        .mark { display: flex; align-items: baseline; gap: 10px; }
+        .mark b {
+            font-size: 30px;
+            font-weight: 900;
+            font-stretch: 125%;
+            letter-spacing: -0.03em;
+            line-height: 1;
+        }
+        .mark span {
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: var(--band-muted);
+        }
+        h1 {
+            margin: 0;
+            font-size: clamp(38px, 7.4vw, 76px);
+            font-weight: 900;
+            font-stretch: 122%;
+            letter-spacing: -0.025em;
+            line-height: 0.98;
+            max-width: 15ch;
+            text-wrap: balance;
+        }
+        h1 em { font-style: normal; color: var(--yellow); }
+        .lede { margin: 0; max-width: 46ch; color: var(--band-muted); font-size: 1.125rem; }
+        .lede strong { color: var(--paper); font-weight: 650; }
+        .actions { display: flex; flex-wrap: wrap; gap: 12px; }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 20px;
+            border-radius: 12px;
+            font-weight: 750;
+            text-decoration: none;
+            border: 2px solid transparent;
+            line-height: 1.2;
+        }
+        .btn.call { background: var(--yellow); color: var(--ink); }
+        .btn.call:hover { background: var(--yellow-deep); }
+        .btn.mail { border-color: rgba(255, 255, 255, 0.28); color: var(--paper); }
+        .btn.mail:hover { border-color: var(--paper); }
+        .btn small { display: block; font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; opacity: 0.75; }
+        .btn svg { width: 22px; height: 22px; flex-shrink: 0; }
+        .stripe { height: 10px; background: repeating-linear-gradient(-45deg, var(--yellow) 0 14px, var(--ink) 14px 28px); }
+
+        .services .wrap { padding-block: clamp(36px, 6vw, 64px); display: grid; gap: 22px; }
+        h2 {
+            margin: 0;
+            font-size: 14px;
+            font-weight: 800;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--muted);
+        }
+        .list { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 0 32px; margin: 0; padding: 0; list-style: none; }
+        .list li { border-top: 2px solid var(--ink); padding-block: 14px 18px; display: grid; gap: 4px; }
+        .list b { font-size: 1.25rem; font-weight: 800; font-stretch: 112%; letter-spacing: -0.01em; }
+        .list span { color: var(--muted); }
+        .area { background: var(--sand); }
+        .area .wrap { padding-block: 22px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px; font-size: 0.95rem; }
+        .area p { margin: 0; }
+        .area strong { font-weight: 750; }
+        footer .wrap { padding-block: 22px 32px; color: var(--muted); font-size: 0.875rem; }
+    </style>
+</head>
+<body>
+    <header class="hero">
+        <div class="wrap">
+            <div class="mark" aria-label="Sashook Limited"><b>sashook</b><span>Limited</span></div>
+            <h1>Junk removal and <em>dirt works</em> in Greater Denver.</h1>
+            <p class="lede"><strong>Our new website is on its way.</strong> We are working as normal in the meantime: call or email us to book a job or get a price.</p>
+            <div class="actions">
+                <a class="btn call" href="tel:+17207079133">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
+                    <span><small>Call or text</small>720-707-9133</span>
+                </a>
+                <a class="btn mail" href="mailto:operations@sashook.co">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+                    <span><small>Email</small>operations@sashook.co</span>
+                </a>
+            </div>
+        </div>
+    </header>
+    <div class="stripe" aria-hidden="true"></div>
+
+    <main class="services">
+        <div class="wrap">
+            <h2>What we do</h2>
+            <ul class="list">
+                <li><b>Dump trailer rental</b><span>We drop a dump trailer at your place, you fill it at your own pace, we haul it away.</span></li>
+                <li><b>Junk removal</b><span>Point at it and it is gone. We load it, haul it and leave the place clean.</span></li>
+                <li><b>Garage cleanout</b><span>Get your garage back. We clear it out and haul it away.</span></li>
+                <li><b>Land cleanup</b><span>Brush, debris and overgrowth cleared with a skid steer, rake grapple and bucket.</span></li>
+                <li><b>Demolition projects</b><span>Sheds, decks, fences and small structures taken down and hauled away.</span></li>
+            </ul>
+        </div>
+    </main>
+
+    <section class="area" aria-label="Service area">
+        <div class="wrap">
+            <p><strong>Serving</strong> Denver and the surrounding areas</p>
+            <p><strong>Call or text</strong> <a href="tel:+17207079133">720-707-9133</a></p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="wrap">&copy; <span id="year">2026</span> Sashook Limited, Greater Denver, Colorado</div>
+    </footer>
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
