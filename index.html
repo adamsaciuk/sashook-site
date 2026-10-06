@@ -1,161 +1,381 @@
 <!doctype html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Sashook Limited | Junk Removal and Dirt Works, Grand Rapids, Michigan</title>
-    <meta name="description" content="Sashook Limited: dump trailer rental, junk removal, garage cleanouts, storm cleanup, land cleanup and demolition in Grand Rapids, Michigan. Call 720-707-9133 to book.">
-    <meta property="og:title" content="Sashook Limited | Junk Removal and Dirt Works">
-    <meta property="og:description" content="Dump trailer rental, junk removal, garage cleanouts, storm cleanup, land cleanup and demolition in Grand Rapids, Michigan.">
-    <meta property="og:url" content="https://sashook.co/">
-    <meta property="og:type" content="website">
-    <meta name="theme-color" content="#16130f">
-    <link rel="icon" href="favicon.svg" type="image/svg+xml">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&display=swap">
-    <style>
-        /* Sashook brand tokens, copied from sashook-web/public/styles.css. */
-        :root {
-            --ink: #16130f;
-            --ink-soft: #27221c;
-            --paper: #fbf8f3;
-            --sand: #f1eadf;
-            --line: rgba(22, 19, 15, 0.12);
-            --muted: #625a50;
-            --band-muted: #b9ae9f;
-            --yellow: #f5b700;
-            --yellow-deep: #dea600;
-            --font: 'Archivo', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
-        }
-        *, *::before, *::after { box-sizing: border-box; }
-        html { -webkit-text-size-adjust: 100%; }
-        body {
-            margin: 0;
-            font-family: var(--font);
-            font-size: 1.0625rem;
-            line-height: 1.6;
-            color: var(--ink);
-            background: var(--paper);
-        }
-        a { color: inherit; }
-        :focus-visible { outline: 3px solid var(--yellow); outline-offset: 3px; border-radius: 4px; }
-        .wrap { width: min(1080px, 100% - 2.5rem); margin-inline: auto; }
-
-        .hero { background: var(--ink); color: var(--paper); }
-        .hero .wrap { padding-block: clamp(36px, 7vw, 80px) clamp(40px, 7vw, 84px); display: grid; gap: 28px; }
-        .mark { display: flex; align-items: baseline; gap: 10px; }
-        .mark b {
-            font-size: 30px;
-            font-weight: 900;
-            font-stretch: 125%;
-            letter-spacing: -0.03em;
-            line-height: 1;
-        }
-        .mark span {
-            font-size: 12px;
-            font-weight: 700;
-            letter-spacing: 0.18em;
-            text-transform: uppercase;
-            color: var(--band-muted);
-        }
-        h1 {
-            margin: 0;
-            font-size: clamp(38px, 7.4vw, 76px);
-            font-weight: 900;
-            font-stretch: 122%;
-            letter-spacing: -0.025em;
-            line-height: 0.98;
-            max-width: 15ch;
-            text-wrap: balance;
-        }
-        h1 em { font-style: normal; color: var(--yellow); }
-        .lede { margin: 0; max-width: 46ch; color: var(--band-muted); font-size: 1.125rem; }
-        .lede strong { color: var(--paper); font-weight: 650; }
-        .actions { display: flex; flex-wrap: wrap; gap: 12px; }
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            padding: 14px 20px;
-            border-radius: 12px;
-            font-weight: 750;
-            text-decoration: none;
-            border: 2px solid transparent;
-            line-height: 1.2;
-        }
-        .btn.call { background: var(--yellow); color: var(--ink); }
-        .btn.call:hover { background: var(--yellow-deep); }
-        .btn.mail { border-color: rgba(255, 255, 255, 0.28); color: var(--paper); }
-        .btn.mail:hover { border-color: var(--paper); }
-        .btn small { display: block; font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; opacity: 0.75; }
-        .btn svg { width: 22px; height: 22px; flex-shrink: 0; }
-        .stripe { height: 10px; background: repeating-linear-gradient(-45deg, var(--yellow) 0 14px, var(--ink) 14px 28px); }
-
-        .services .wrap { padding-block: clamp(36px, 6vw, 64px); display: grid; gap: 22px; }
-        h2 {
-            margin: 0;
-            font-size: 14px;
-            font-weight: 800;
-            letter-spacing: 0.14em;
-            text-transform: uppercase;
-            color: var(--muted);
-        }
-        .list { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 0 32px; margin: 0; padding: 0; list-style: none; }
-        .list li { border-top: 2px solid var(--ink); padding-block: 14px 18px; display: grid; gap: 4px; }
-        .list b { font-size: 1.25rem; font-weight: 800; font-stretch: 112%; letter-spacing: -0.01em; }
-        .list span { color: var(--muted); }
-        .area { background: var(--sand); }
-        .area .wrap { padding-block: 22px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px; font-size: 0.95rem; }
-        .area p { margin: 0; }
-        .area strong { font-weight: 750; }
-        footer .wrap { padding-block: 22px 32px; color: var(--muted); font-size: 0.875rem; }
-    </style>
-</head>
-<body>
-    <header class="hero">
-        <div class="wrap">
-            <div class="mark" aria-label="Sashook Limited"><b>sashook</b><span>Limited</span></div>
-            <h1>Junk removal and <em>dirt works</em> in Grand Rapids.</h1>
-            <p class="lede"><strong>Our new website is on its way.</strong> We are working as normal in the meantime: call or email us to book a job or get a price.</p>
-            <div class="actions">
-                <a class="btn call" href="tel:+17207079133">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
-                    <span><small>Call or text</small>720-707-9133</span>
-                </a>
-                <a class="btn mail" href="mailto:operations@sashook.co">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
-                    <span><small>Email</small>operations@sashook.co</span>
-                </a>
+        <html lang="en">
+            <head>
+                <meta charset="utf-8" />
+                <meta name="viewport" content="width=device-width, initial-scale=1" />
+                <title>Sashook Limited | Junk Removal and Dirt Works in Grand Rapids</title>
+                <meta name="description" content="Sashook Limited: dump trailer rental, junk removal, garage cleanouts, storm cleanup, land cleanup and demolition across Grand Rapids and the surrounding area. Request a booking online and get a fixed price before we start." />
+                
+                <link rel="canonical" href="https://sashook.co/" />
+                <meta property="og:title" content="Sashook Limited | Junk Removal and Dirt Works in Grand Rapids" />
+                <meta property="og:description" content="Sashook Limited: dump trailer rental, junk removal, garage cleanouts, storm cleanup, land cleanup and demolition across Grand Rapids and the surrounding area. Request a booking online and get a fixed price before we start." />
+                <meta property="og:type" content="website" />
+                <meta name="theme-color" content="#16130f" />
+                <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+                <link rel="preconnect" href="https://fonts.googleapis.com" />
+                <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+                <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&amp;display=swap" />
+                <link rel="stylesheet" href="/styles.css" />
+                
+                <script type="module" src="/home.js"></script>
+                <link rel="stylesheet" href="/sections.css" />
+            </head>
+            <body>
+                <a class="skip-link" href="#main">Skip to content</a>
+                <header class="site-header">
+        <div class="wrap header-row">
+            <a class="brand" href="/" aria-label="Sashook Limited, home">
+        <span class="brand-name">sashook</span><span class="brand-sub">limited</span>
+    </a>
+            <nav class="site-nav" aria-label="Main">
+                <a href="/#services">Services</a>
+                <a href="/#how-it-works">How it works</a>
+                <a href="/#about">About</a>
+                <a href="/book/">Trade</a>
+            </nav>
+            <div class="header-actions">
+                <a class="header-phone" href="tel:+17207079133"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><span>720-707-9133</span></a>
+                <a class="button button-yellow button-small" href="/book/">Book a job</a>
             </div>
         </div>
     </header>
-    <div class="stripe" aria-hidden="true"></div>
-
-    <main class="services">
-        <div class="wrap">
-            <h2>What we do</h2>
-            <ul class="list">
-                <li><b>Dump trailer rental</b><span>We drop a dump trailer at your place, you fill it at your own pace, we haul it away.</span></li>
-                <li><b>Junk removal</b><span>Point at it and it is gone. We load it, haul it and leave the place clean.</span></li>
-                <li><b>Garage cleanout</b><span>Get your garage back. We clear it out and haul it away.</span></li>
-                <li><b>Storm cleanup</b><span>Fallen trees and broken branches cut up, loaded and hauled away, and the yard left tidy.</span></li>
-                <li><b>Land cleanup</b><span>Brush, debris and overgrowth cleared with a skid steer, rake grapple and bucket.</span></li>
-                <li><b>Demolition projects</b><span>Sheds, decks, fences and small structures taken down and hauled away.</span></li>
-            </ul>
+                <main id="main"><section class="hero">
+        <div class="wrap hero-grid">
+            <div class="hero-copy">
+                <p class="eyebrow">Junk Removal and Dirt Works &middot; Grand Rapids</p>
+                <h1 class="hero-title">Junk gone.<br /><span class="hero-accent">Ground ready.</span></h1>
+                <p class="hero-lead">We drop a dump trailer on your driveway, you fill it at your own pace (or we can do the junk removal too), and we haul it away. Fixed price before anything starts.</p>
+                <div class="hero-actions">
+                    <a class="button button-yellow button-large" href="/book/">Request a trailer <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+                    <a class="button button-ghost button-large" href="tel:+17207079133"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg> 720-707-9133</a>
+                </div>
+                <ul class="hero-points">
+                    <li><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg> Fixed price before we start</li>
+                    <li><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg> Father-and-son owned</li>
+                    <li><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg> Pay online, card or bank</li>
+                </ul>
+                
+            </div>
+            <aside class="ticket" aria-label="How a booking looks">
+        <div class="ticket-head">
+            <span class="ticket-label">Example booking</span>
+            <span class="ticket-ref">SL-7K3QM</span>
         </div>
-    </main>
-
-    <section class="area" aria-label="Service area">
-        <div class="wrap">
-            <p><strong>Serving</strong> Grand Rapids and the surrounding area</p>
-            <p><strong>Call or text</strong> <a href="tel:+17207079133">720-707-9133</a></p>
+        <div class="ticket-row">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 7h15v8H2z"/><path d="M17 13h5"/><circle cx="6.5" cy="17.5" r="2"/><circle cx="12.5" cy="17.5" r="2"/></svg>
+            <div><strong>Dump trailer drop off</strong><span>Driveway drop, household junk</span></div>
         </div>
-    </section>
-
-    <footer>
-        <div class="wrap">&copy; <span id="year">2026</span> Sashook Limited, Grand Rapids, Michigan</div>
+        <div class="ticket-row">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.5-7-12a7 7 0 0 1 14 0c0 5.5-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>
+            <div><strong>Grand Rapids, MI</strong><span>Driveway access, 3 photos attached</span></div>
+        </div>
+        <div class="ticket-row">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+            <div><strong>Saturday, morning</strong><span>Your time, confirmed by us</span></div>
+        </div>
+        <div class="ticket-price">
+            <div><span>Fixed price</span><strong>$480</strong></div>
+            <div><span>Deposit to lock in</span><strong>$240</strong></div>
+        </div>
+        <div class="ticket-stamp">Confirmed</div>
+    </aside>
+        </div>
+        <div class="hazard" aria-hidden="true"></div>
+    </section><section
+        class="story"
+        id="trailer-drop"
+        data-story
+        data-scene="trailer-drop"
+        data-frames="/media/trailer-drop/frame-{n}.webp"
+        data-frame-count="228"
+        data-focus-x="0.58"
+        data-step-frames="1,34,76,174"
+        style="--steps:4"
+    >
+        <div class="story-stage">
+            <canvas class="story-canvas" data-story-canvas aria-hidden="true"></canvas>
+            <div class="story-shade" aria-hidden="true"></div>
+            <div class="wrap story-copy">
+                <p class="eyebrow">We drop it off, you fill it (or we can do the junk removal too), we haul it away</p>
+                <ol class="story-steps">
+                    <li class="story-step is-active" data-story-step>
+                                <span class="story-count">01 / 04</span>
+                                <h2 class="story-title">We drop it off.</h2>
+                                <p class="story-text">Right where you need it, on your driveway.</p>
+                                
+                            </li><li class="story-step" data-story-step>
+                                <span class="story-count">02 / 04</span>
+                                <h2 class="story-title">Parked where you want it.</h2>
+                                <p class="story-text">Backed in and set down. Then it is yours to fill.</p>
+                                
+                            </li><li class="story-step" data-story-step>
+                                <span class="story-count">03 / 04</span>
+                                <h2 class="story-title">You fill it.</h2>
+                                <p class="story-text">Household junk, old furniture, the lot, at your own pace. Or we can do the junk removal too.</p>
+                                
+                            </li><li class="story-step" data-story-step>
+                                <span class="story-count">04 / 04</span>
+                                <h2 class="story-title">We haul it away.</h2>
+                                <p class="story-text">Driveway clear. No pile, no hassle.</p>
+                                <a class="button button-yellow" href="/book/">Request a trailer <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+                            </li>
+                </ol>
+            </div>
+            <div class="story-rail" aria-hidden="true">
+                <span class="story-dot is-active" data-story-dot></span><span class="story-dot" data-story-dot></span><span class="story-dot" data-story-dot></span><span class="story-dot" data-story-dot></span>
+            </div>
+            <p class="story-hint" aria-hidden="true">Scroll</p>
+        </div>
+        <div class="story-snaps" aria-hidden="true"><span class="story-snap"></span><span class="story-snap"></span><span class="story-snap"></span><span class="story-snap"></span></div>
+    </section><section class="section section-tight" id="services">
+        <div class="wrap">
+            <div class="section-head">
+                <p class="eyebrow eyebrow-dark">More ways we help</p>
+                <h2 class="section-title">Other services</h2>
+            </div>
+            <div class="service-pills">
+                <a class="service-pill" href="/book/">
+                            <span class="service-pill-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="9" width="18" height="11" rx="1"/><path d="M2 9l2-4h16l2 4"/><path d="M9 13h6"/></svg></span>
+                            <span class="service-pill-text"><strong>Junk removal</strong><span>Point at it and it is gone. We load it, haul it and leave the place clean.</span></span>
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                        </a><a class="service-pill" href="/book/">
+                            <span class="service-pill-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10l9-6 9 6v10H3z"/><path d="M7 20v-7h10v7"/><path d="M7 16.5h10"/></svg></span>
+                            <span class="service-pill-text"><strong>Garage cleanout</strong><span>Get your garage back. We clear it out, haul it away and leave it swept.</span></span>
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                        </a><a class="service-pill" href="/book/">
+                            <span class="service-pill-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 16a4 4 0 0 1 0-8 5 5 0 0 1 9.6-1.4A3.5 3.5 0 1 1 17.5 16"/><path d="M12.5 12l-2 4h3l-2 4"/></svg></span>
+                            <span class="service-pill-text"><strong>Storm cleanup</strong><span>Fallen trees and broken branches cut up, loaded and hauled away, and the yard left tidy.</span></span>
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                        </a><a class="service-pill" href="/book/">
+                            <span class="service-pill-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 21h20"/><path d="M3 8h10l-2 7H3z"/><path d="M4 15v3M7 15v3M10 15v3"/><path d="M13 8l4-3h4"/></svg></span>
+                            <span class="service-pill-text"><strong>Land cleanup</strong><span>Brush, debris and overgrowth cleared with a skid steer, rake grapple and bucket.</span></span>
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                        </a><a class="service-pill" href="/book/">
+                            <span class="service-pill-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="1"/><path d="M3 10h8M15 10h6M3 15h6M13 15h8M8 4v6M17 15v5"/><path d="M13 4l-2 6 3 2-2 8"/></svg></span>
+                            <span class="service-pill-text"><strong>Demolition projects</strong><span>Sheds, decks, fences and small structures taken down and hauled away.</span></span>
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                        </a>
+                <a class="service-pill service-pill-dark" href="/book/">
+                    <span class="service-pill-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg></span>
+                    <span class="service-pill-text"><strong>Something else?</strong><span>Tell us the job and we will tell you straight if we can help.</span></span>
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </a>
+            </div>
+        </div>
+    </section><section class="section section-ink" id="estimator">
+        <div class="wrap estimator" data-estimator data-loads="[{&quot;key&quot;:&quot;minimum&quot;,&quot;label&quot;:&quot;Minimum&quot;,&quot;fill&quot;:0.1,&quot;price&quot;:&quot;$125 to $175&quot;,&quot;example&quot;:&quot;A sofa, a mattress or a few bags&quot;},{&quot;key&quot;:&quot;quarter&quot;,&quot;label&quot;:&quot;Quarter load&quot;,&quot;fill&quot;:0.25,&quot;price&quot;:&quot;$200 to $275&quot;,&quot;example&quot;:&quot;A small room or a yard waste pile&quot;},{&quot;key&quot;:&quot;half&quot;,&quot;label&quot;:&quot;Half load&quot;,&quot;fill&quot;:0.5,&quot;price&quot;:&quot;$325 to $425&quot;,&quot;example&quot;:&quot;A one-car garage&quot;},{&quot;key&quot;:&quot;three-quarter&quot;,&quot;label&quot;:&quot;Three-quarter load&quot;,&quot;fill&quot;:0.75,&quot;price&quot;:&quot;$450 to $550&quot;,&quot;example&quot;:&quot;A full basement&quot;},{&quot;key&quot;:&quot;full&quot;,&quot;label&quot;:&quot;Full trailer&quot;,&quot;fill&quot;:1,&quot;price&quot;:&quot;$575 to $700&quot;,&quot;example&quot;:&quot;A two-car garage or a remodel&quot;}]">
+            <div class="estimator-art"><svg class="trailer-art" viewBox="0 0 640 290" role="img" aria-label="Our dump trailer, cut away to show how full your load is">
+        <line class="trailer-ground" x1="0" y1="270" x2="640" y2="270" />
+        <path class="trailer-steel" d="M26 214H130" stroke-width="10" stroke-linecap="round" />
+        <circle class="trailer-steel-fill" cx="26" cy="214" r="9" />
+        <rect class="trailer-steel-fill" x="92" y="214" width="8" height="40" />
+        <rect class="trailer-steel-fill" x="84" y="252" width="24" height="6" rx="2" />
+        <rect class="trailer-inside" x="128" y="96" width="470" height="124" />
+        <g clip-path="url(#trailer-load-clip)"><rect class="load-piece load-metal is-in" data-level="0.1" style="--i:0" x="133.98489902867004" y="201.763764052419" width="40.5230386024341" height="14.236235947581008" rx="1" /><rect class="load-piece load-board is-in" data-level="0.1" style="--i:1" x="178.89558354346082" y="209" width="100.21531263366342" height="7" rx="1" /><rect class="load-piece load-metal is-in" data-level="0.1" style="--i:2" x="281.5902969338931" y="202.8754769274965" width="38.36241792887449" height="13.124523072503507" rx="1" /><g class="load-piece load-box is-in" data-level="0.1" style="--i:3"><rect x="325.68321920884773" y="201.641754174605" width="45.65994044020772" height="14.358245825394988" rx="1.5" /><path d="M348.5131894289516 201.641754174605v14.358245825394988" /></g><rect class="load-piece load-bag is-in" data-level="0.1" style="--i:4" x="374.56843922799453" y="203.50423734798096" width="60.94985817745328" height="12.495762652019039" rx="6.247881326009519" /><rect class="load-piece load-metal is-in" data-level="0.1" style="--i:5" x="440.7135498528369" y="203.50796830910258" width="36.48757401946932" height="12.49203169089742" rx="1" /><g class="load-piece load-box is-in" data-level="0.1" style="--i:6"><rect x="481.35506745195016" y="203.60713032446802" width="37.41731046047062" height="12.392869675531983" rx="1.5" /><path d="M500.06372268218547 203.60713032446802v12.392869675531983" /></g><rect class="load-piece load-bag is-in" data-level="0.1" style="--i:7" x="521.184350003954" y="202.95779669098556" width="55.87636305671185" height="13.04220330901444" rx="6.52110165450722" /><rect class="load-piece load-board is-in" data-level="0.25" style="--i:8" x="132.73375042900443" y="192" width="96.7819652450271" height="7" rx="1" /><rect class="load-piece load-drywall is-in" data-level="0.25" style="--i:9" x="232.3639884260483" y="185.51225849916227" width="35.114648127928376" height="13.487741500837728" rx="1" /><rect class="load-piece load-board is-in" data-level="0.25" style="--i:10" x="272.36584879504517" y="192" width="88.33184551214799" height="7" rx="1" /><rect class="load-piece load-drywall is-in" data-level="0.25" style="--i:11" x="366.69625783897936" y="186.72965236590244" width="43.95687574893236" height="12.270347634097561" rx="1" /><g class="load-piece load-box is-in" data-level="0.25" style="--i:12"><rect x="413.6948115658015" y="185.01779614505358" width="63.90084897726774" height="13.98220385494642" rx="1.5" /><path d="M445.6452360544354 185.01779614505358v13.98220385494642" /></g><g class="load-piece load-box is-in" data-level="0.25" style="--i:13"><rect x="480.8362383209169" y="186.53345194412395" width="58.69907634705305" height="12.466548055876046" rx="1.5" /><path d="M510.1857764944434 186.53345194412395v12.466548055876046" /></g><rect class="load-piece load-board is-in" data-level="0.25" style="--i:14" x="542.0321990475059" y="192" width="51.967800952494144" height="7" rx="1" /><rect class="load-piece load-bag is-in" data-level="0.38" style="--i:15" x="134.31260576611385" y="168.94878928479739" width="47.956735365092754" height="13.051210715202615" rx="6.525605357601307" /><rect class="load-piece load-bag is-in" data-level="0.38" style="--i:16" x="186.41560047632083" y="167.53070339909755" width="57.88692946638912" height="14.469296600902453" rx="7.2346483004512265" /><g class="load-piece load-box is-in" data-level="0.38" style="--i:17"><rect x="246.64604590507224" y="168.4550163121894" width="60.656995821744204" height="13.5449836878106" rx="1.5" /><path d="M276.97454381594434 168.4550163121894v13.5449836878106" /></g><g class="load-piece load-box is-in" data-level="0.38" style="--i:18"><rect x="311.27188130421564" y="168.80679982691072" width="57.5266111465171" height="13.19320017308928" rx="1.5" /><path d="M340.0351868774742 168.80679982691072v13.19320017308928" /></g><rect class="load-piece load-board is-in" data-level="0.38" style="--i:19" x="373.9549426292069" y="175" width="86.12786547048017" height="7" rx="1" /><rect class="load-piece load-drywall is-in" data-level="0.38" style="--i:20" x="463.39291870966554" y="167.4853537727613" width="50.33303917106241" height="14.5146462272387" rx="1" /><rect class="load-piece load-bag is-in" data-level="0.38" style="--i:21" x="518.8419367019087" y="168.4238556015771" width="37.9126381482929" height="13.576144398422912" rx="6.788072199211456" /><rect class="load-piece load-metal is-in" data-level="0.38" style="--i:22" x="559.9268523557112" y="168.56050112540834" width="34.07314764428884" height="13.439498874591663" rx="1" /><rect class="load-piece load-board is-in" data-level="0.5" style="--i:23" x="134.8114958773367" y="158" width="79.22893732786179" height="7" rx="1" /><rect class="load-piece load-drywall is-in" data-level="0.5" style="--i:24" x="219.12333594588563" y="150.41982868965715" width="61.90913318283856" height="14.580171310342848" rx="1" /><g class="load-piece load-box is-in" data-level="0.5" style="--i:25"><rect x="286.1711360695772" y="151.97700921515934" width="59.09479598701" height="13.022990784840658" rx="1.5" /><path d="M315.7185340630822 151.97700921515934v13.022990784840658" /></g><rect class="load-piece load-metal is-in" data-level="0.5" style="--i:26" x="347.4925869437866" y="150.24443980841897" width="53.5518430089578" height="14.755560191581026" rx="1" /><rect class="load-piece load-bag is-in" data-level="0.5" style="--i:27" x="406.35904009407386" y="150.29950995440595" width="47.287239423953" height="14.700490045594051" rx="7.350245022797026" /><rect class="load-piece load-metal is-in" data-level="0.5" style="--i:28" x="458.8386680702679" y="152.94337993045337" width="53.45092952158302" height="12.056620069546625" rx="1" /><rect class="load-piece load-drywall is-in" data-level="0.5" style="--i:29" x="515.1830144491978" y="150.82601361069828" width="55.77365692332387" height="14.173986389301717" rx="1" /><rect class="load-piece load-board" data-level="0.63" style="--i:30" x="136.82024447852746" y="141" width="102.67072815215215" height="7" rx="1" /><rect class="load-piece load-board" data-level="0.63" style="--i:31" x="243.04064065311104" y="141" width="95.3471604315564" height="7" rx="1" /><rect class="load-piece load-bag" data-level="0.63" style="--i:32" x="340.60622654948384" y="133.3494585172739" width="48.121563982218504" height="14.650541482726112" rx="7.325270741363056" /><rect class="load-piece load-board" data-level="0.63" style="--i:33" x="391.43607878591865" y="141" width="101.71365156304091" height="7" rx="1" /><rect class="load-piece load-board" data-level="0.63" style="--i:34" x="497.89899463485926" y="141" width="96.10100536514074" height="7" rx="1" /><rect class="load-piece load-drywall" data-level="0.75" style="--i:35" x="137.98142200754955" y="117.54628408001736" width="30.87910169083625" height="13.453715919982642" rx="1" /><rect class="load-piece load-board" data-level="0.75" style="--i:36" x="172.06065072165802" y="124" width="74.36746142804623" height="7" rx="1" /><g class="load-piece load-box" data-level="0.75" style="--i:37"><rect x="251.052716022823" y="117.53820334002376" width="42.251786325126886" height="13.461796659976244" rx="1.5" /><path d="M272.17860918538645 117.53820334002376v13.461796659976244" /></g><g class="load-piece load-box" data-level="0.75" style="--i:38"><rect x="297.66867341054603" y="118.45933096297085" width="49.4057370275259" height="12.540669037029147" rx="1.5" /><path d="M322.371541924309 118.45933096297085v12.540669037029147" /></g><rect class="load-piece load-metal" data-level="0.75" style="--i:39" x="352.30868695722893" y="118.46943828649819" width="30.056094747036695" height="12.530561713501811" rx="1" /><g class="load-piece load-box" data-level="0.75" style="--i:40"><rect x="387.6811523004435" y="118.32185446913354" width="31.839313969016075" height="12.678145530866459" rx="1.5" /><path d="M403.60080928495154 118.32185446913354v12.678145530866459" /></g><rect class="load-piece load-metal" data-level="0.75" style="--i:41" x="424.0738259940408" y="117.48768053227104" width="49.346898154355586" height="13.512319467728958" rx="1" /><rect class="load-piece load-board" data-level="0.75" style="--i:42" x="477.5901618632488" y="124" width="91.47812469629571" height="7" rx="1" /><rect class="load-piece load-drywall" data-level="0.88" style="--i:43" x="135.72288645710796" y="101.53667926113121" width="36.46221050620079" height="12.463320738868788" rx="1" /><rect class="load-piece load-board" data-level="0.88" style="--i:44" x="175.4729755418375" y="107" width="73.75135907670483" height="7" rx="1" /><rect class="load-piece load-board" data-level="0.88" style="--i:45" x="251.291557403747" y="107" width="97.70068837562576" height="7" rx="1" /><rect class="load-piece load-metal" data-level="0.88" style="--i:46" x="354.8328357618302" y="99.13961421581917" width="42.7378147020936" height="14.860385784180835" rx="1" /><rect class="load-piece load-drywall" data-level="0.88" style="--i:47" x="401.0231528254226" y="101.2406839672476" width="31.624237879179418" height="12.759316032752395" rx="1" /><rect class="load-piece load-board" data-level="0.88" style="--i:48" x="437.52048782259226" y="107" width="105.4205198935233" height="7" rx="1" /><rect class="load-piece load-drywall" data-level="0.88" style="--i:49" x="547.081990357954" y="100.89334625657648" width="30.770625228993595" height="13.106653743423522" rx="1" /><g class="load-piece load-box" data-level="1" style="--i:50"><rect x="174.61625642329454" y="83.3117506802082" width="42.42233005911112" height="13.688249319791794" rx="1.5" /><path d="M195.8274214528501 83.3117506802082v13.688249319791794" /></g><rect class="load-piece load-metal" data-level="1" style="--i:51" x="222.65653243567795" y="84.7237690424081" width="35.11965539306402" height="12.276230957591906" rx="1" /><rect class="load-piece load-bag" data-level="1" style="--i:52" x="259.9133189609274" y="82.89181584003381" width="53.28431007731706" height="14.108184159966186" rx="7.054092079983093" /><rect class="load-piece load-board" data-level="1" style="--i:53" x="318.3602137975395" y="90" width="77.0533714722842" height="7" rx="1" /><rect class="load-piece load-metal" data-level="1" style="--i:54" x="399.9820643523708" y="83.05047654919326" width="51.553646695800126" height="13.949523450806737" rx="1" /><g class="load-piece load-box" data-level="1" style="--i:55"><rect x="456.06211824528873" y="83.61027920315973" width="37.20677105896175" height="13.389720796840265" rx="1.5" /><path d="M474.6655037747696 83.61027920315973v13.389720796840265" /></g><g class="load-piece load-box" data-level="1" style="--i:56"><rect x="498.40110367909074" y="84.39393427595496" width="31.373763654381037" height="12.606065724045038" rx="1.5" /><path d="M514.0879855062813 84.39393427595496v12.606065724045038" /></g><rect class="load-piece load-metal" data-level="1" style="--i:57" x="245.2724715685472" y="67.77341592661105" width="62.18352590594441" height="12.226584073388949" rx="1" /><g class="load-piece load-box" data-level="1" style="--i:58"><rect x="312.78627789672464" y="65.38366798171774" width="31.359654312953353" height="14.616332018282264" rx="1.5" /><path d="M328.4661050532013 65.38366798171774v14.616332018282264" /></g><rect class="load-piece load-board" data-level="1" style="--i:59" x="348.30746733397245" y="73" width="111.45643814699724" height="7" rx="1" /></g>
+        <rect class="trailer-wall" x="128" y="100" width="470" height="116" />
+        <rect class="trailer-steel-fill" x="122" y="90" width="482" height="10" rx="3" />
+        <rect class="trailer-steel-fill" x="122" y="90" width="10" height="132" /><rect class="trailer-steel-fill" x="238" y="90" width="10" height="132" /><rect class="trailer-steel-fill" x="354" y="90" width="10" height="132" /><rect class="trailer-steel-fill" x="470" y="90" width="10" height="132" /><rect class="trailer-steel-fill" x="594" y="90" width="10" height="132" />
+        <rect class="trailer-steel-fill" x="122" y="214" width="482" height="16" />
+        <line class="trailer-tape-red" x1="130" y1="222" x2="598" y2="222" />
+        <line class="trailer-tape-white" x1="130" y1="222" x2="598" y2="222" />
+        <rect class="trailer-steel-fill" x="604" y="92" width="10" height="136" rx="2" />
+        <path class="trailer-steel" d="M296 236a44 24 0 0 1 140 0" stroke-width="8" fill="none" />
+        <circle class="trailer-steel-fill" cx="330" cy="246" r="24" /><circle class="trailer-rim" cx="330" cy="246" r="11" /><circle
+                        class="trailer-steel-fill"
+                        cx="330"
+                        cy="246"
+                        r="4"
+                    /><circle class="trailer-steel-fill" cx="402" cy="246" r="24" /><circle class="trailer-rim" cx="402" cy="246" r="11" /><circle
+                        class="trailer-steel-fill"
+                        cx="402"
+                        cy="246"
+                        r="4"
+                    />
+        <defs>
+            <clipPath id="trailer-load-clip"><rect x="130" y="40" width="466" height="176" /></clipPath>
+        </defs>
+    </svg></div>
+            <div class="estimator-panel">
+                <p class="eyebrow">Junk removal price guide</p>
+                <h2 class="section-title">How much will it cost?</h2>
+                <p class="estimator-intro">Drag the slider until the trailer looks like your pile.</p>
+                <div class="estimator-readout" aria-live="polite">
+        <span class="estimator-label" data-estimate-label>Half load</span>
+        <strong class="estimator-price" data-estimate-price>$325 to $425</strong>
+        <span class="estimator-example" data-estimate-example>A one-car garage</span>
+    </div>
+                <input
+                    class="estimator-range"
+                    type="range"
+                    min="0"
+                    max="4"
+                    step="1"
+                    value="2"
+                    data-estimate-range
+                    aria-label="Load size"
+                />
+                <div class="estimator-ticks" aria-hidden="true"><span>Min</span><span>&frac14;</span><span>&frac12;</span><span>&frac34;</span><span>Full</span></div>
+                <div class="estimator-actions">
+                    <a class="button button-yellow" href="/book/" data-estimate-book>Book this load <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+                    <span class="draft-badge">Draft prices for review</span>
+                </div>
+                <p class="estimator-note">Your price is fixed once we see photos of the job. No surprises on the day.</p>
+                <details class="estimator-list">
+        <summary>See every load size</summary>
+        <table>
+            <tbody>
+                <tr>
+                            <th scope="row">Minimum</th>
+                            <td>A sofa, a mattress or a few bags</td>
+                            <td>$125 to $175</td>
+                        </tr><tr>
+                            <th scope="row">Quarter load</th>
+                            <td>A small room or a yard waste pile</td>
+                            <td>$200 to $275</td>
+                        </tr><tr>
+                            <th scope="row">Half load</th>
+                            <td>A one-car garage</td>
+                            <td>$325 to $425</td>
+                        </tr><tr>
+                            <th scope="row">Three-quarter load</th>
+                            <td>A full basement</td>
+                            <td>$450 to $550</td>
+                        </tr><tr>
+                            <th scope="row">Full trailer</th>
+                            <td>A two-car garage or a remodel</td>
+                            <td>$575 to $700</td>
+                        </tr>
+            </tbody>
+        </table>
+    </details>
+            </div>
+        </div>
+    </section><section class="section section-sand" id="how-it-works">
+        <div class="wrap">
+            <div class="section-head">
+                <p class="eyebrow eyebrow-dark">How booking works</p>
+                <h2 class="section-title">Four steps. No surprises.</h2>
+            </div>
+            <ol class="steps">
+                <li class="step">
+                            <span class="step-number">01</span>
+                            <h3>Tell us the job</h3>
+                            <p>Pick the service, add a few photos and choose up to three times that suit you.</p>
+                        </li><li class="step">
+                            <span class="step-number">02</span>
+                            <h3>We confirm</h3>
+                            <p>We reply with a fixed price and confirm one of your times, or suggest another.</p>
+                        </li><li class="step">
+                            <span class="step-number">03</span>
+                            <h3>Lock it in</h3>
+                            <p>Accept, and a 50% deposit holds your time. Pay online by card or bank.</p>
+                        </li><li class="step">
+                            <span class="step-number">04</span>
+                            <h3>Job done</h3>
+                            <p>We do the work and leave the site clean. The balance is invoiced when we finish.</p>
+                        </li>
+            </ol>
+            <div class="promise">
+                <strong>Fixed price, agreed up front.</strong>
+                <span>If the job turns out different on the day, we agree any change with you on site before we start.</span>
+            </div>
+        </div>
+    </section><section class="section" id="land-cleanup">
+        <div class="wrap">
+            <div class="section-head">
+                <p class="eyebrow eyebrow-dark">Land cleanup</p>
+                <h2 class="section-title">The right tool for your ground.</h2>
+                <p class="section-lead">Our skid steer runs two attachments. Here is what each one does, so you can tell us what your job needs.</p>
+            </div>
+            <div class="attachment-grid">
+                <article class="attachment-card">
+                            <div class="attachment-figure"><svg class="attachment-drawing" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 14h46"/><path d="M14 14c3-8 16-11 26-5"/><path d="M40 9l6 5"/><path d="M14 14v28c0 6 4 10 9 10"/><path d="M23 14v28c0 6 4 10 9 10"/><path d="M32 14v28c0 6 4 10 9 10"/><path d="M41 14v28c0 6 4 10 9 10"/></svg></div>
+                            <div>
+                                <h3>Rake grapple</h3>
+                                <p>Long tines with a clamp on top. It grabs brush, branches and debris and lets the dirt fall through, so your topsoil stays where it is.</p>
+                                <h4>Best for</h4>
+                                <ul class="attachment-uses">
+                                    <li><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg> Overgrown lots and brush</li><li><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg> Fallen limbs and small trees</li><li><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg> Debris piles and old fencing</li><li><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg> Loading junk straight into the trailer</li>
+                                </ul>
+                            </div>
+                        </article><article class="attachment-card">
+                            <div class="attachment-figure"><svg class="attachment-drawing" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 12h34l9 32c1 5-2 8-7 8H10z"/><path d="M10 12v40"/><path d="M14 52h32"/><path d="M44 12l-6 8H10"/></svg></div>
+                            <div>
+                                <h3>Bucket</h3>
+                                <p>A smooth-edged scoop for moving material. It digs, carries, spreads and levels, and leaves a clean, even surface.</p>
+                                <h4>Best for</h4>
+                                <ul class="attachment-uses">
+                                    <li><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg> Moving dirt, gravel and mulch</li><li><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg> Light grading and levelling</li><li><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg> Scraping and backfill</li><li><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg> Clearing loose rubble</li>
+                                </ul>
+                            </div>
+                        </article>
+            </div>
+            <p class="attachment-cta">
+                <span>Not sure which your job needs? Send photos and we will pick.</span>
+                <a class="button button-dark" href="/book/">Book land cleanup <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            </p>
+        </div>
+    </section><section class="section" id="about">
+        <div class="wrap about-grid">
+            <div>
+                <p class="eyebrow eyebrow-dark">Who we are</p>
+                <h2 class="section-title">A father and son who turn up and finish the job.</h2>
+            </div>
+            <div class="about-copy">
+                <p>
+                    Sashook Limited is a locally owned, father-and-son business serving Grand Rapids and the surrounding area since 2025. From small residential cleanouts
+                    to bigger dirt and demolition jobs, no job is too big or too small.
+                </p>
+                <p>
+                    You get honest communication, dependable work and a hands-on approach from start to finish. We leave every site clean and ready for what comes next.
+                </p>
+                <p class="about-contact">
+                    <a href="tel:+17207079133"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg> 720-707-9133</a>
+                    <a href="mailto:operations@sashook.co"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg> operations@sashook.co</a>
+                </p>
+            </div>
+        </div>
+    </section><section class="closing">
+        <div class="wrap closing-row">
+            <div>
+                <h2 class="closing-title">Got a job? Send it over.</h2>
+                <p>Two minutes to request. We reply with a fixed price and a time.</p>
+            </div>
+            <div class="closing-actions">
+                <a class="button button-dark button-large" href="/book/">Request a booking <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+                <a class="button button-outline-dark button-large" href="tel:+17207079133"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg> Call us</a>
+            </div>
+        </div>
+    </section></main>
+                <footer class="site-footer">
+        <div class="wrap footer-grid">
+            <div>
+                <a class="brand" href="/" aria-label="Sashook Limited, home">
+        <span class="brand-name">sashook</span><span class="brand-sub">limited</span>
+    </a>
+                <p class="footer-tagline">Junk Removal and Dirt Works</p>
+                <p class="footer-muted">Grand Rapids, Michigan</p>
+            </div>
+            <div>
+                <h2 class="footer-heading">Services</h2>
+                <ul class="footer-list">
+                    <li><a href="/book/">Dump trailer rental</a></li><li><a href="/book/">Junk removal</a></li><li><a href="/book/">Garage cleanout</a></li><li><a href="/book/">Storm cleanup</a></li><li><a href="/book/">Land cleanup</a></li><li><a href="/book/">Demolition projects</a></li>
+                </ul>
+            </div>
+            <div>
+                <h2 class="footer-heading">Get in touch</h2>
+                <ul class="footer-list">
+                    <li><a href="tel:+17207079133"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg> 720-707-9133</a></li>
+                    <li><a href="mailto:operations@sashook.co"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg> operations@sashook.co</a></li>
+                    <li><a href="/book/"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg> Request a booking</a></li>
+                    <li><a href="/book/"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg> Trade accounts</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="wrap footer-base">
+            <span>&copy; 2026 Sashook Limited</span>
+            <span>Serving Grand Rapids and the surrounding area since 2025</span>
+        </div>
     </footer>
-    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
-</body>
-</html>
+            </body>
+        </html>
